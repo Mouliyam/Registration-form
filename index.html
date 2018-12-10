@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN PAGE</title>
+	<link rel="stylesheet" type="text/css" href="loginstyle.css"/>
+	 <script src="function.js"></script> 
+</head>
+<body>
+	<div class="container" id="container" >
+		<img src="user.jpg" alt="User" id="image" >
+		<h1>Login Here</h1>
+		<form>
+			<div id="email">
+				<label>Email Id</label>
+				<input type="text" name="mailid" placeholder="Enter your email">
+			</div>
+			<div id="password">
+				<label>Password</label>
+				<input type="password" name="pwd" id="pwd" placeholder="Enter your Password" onBlur="pwdMatch();" required >
+				<a href="index.html" style="font-size:15px;color:white;">Forgotten password?</a>
+			</div>
+			<div id="button">
+				<input type="submit" name="login" value="LOGIN">
+				<p>Or <a href="sign.html">SignUp</a> here</p>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

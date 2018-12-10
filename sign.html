@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up Page</title>
+	<link rel="stylesheet" type="text/css" href="SignUpStyle.css">
+	<script src="function.js">
+	
+</script> 
+</head>
+<body>
+	<div id="SignUp">
+		<img src="user.jpg" alt="user" id="image">
+		<h1>Sign Up Here</h1>
+		<form name="create_account" method="post" onsubmit="return formValidation();" action="/action.php" >
+			<div id="name">
+				<label>Name</label>
+					<input type="text" name="cname" placeholder="Enter your name" onkeypress="return onlyAlphabets(event);" required><br>
+				<label>Password</label>
+					<input type="password" name="pwd" id="pwd" placeholder="Enter your Password" onBlur="pwdMatch();" required ><br>
+				<label>Confirm Password</label>
+					<input type="password" name="cpwd" id="cpwd" placeholder="ReEnter your Password" onBlur="pwdMatch();"required ><br>
+			</div>
+			<div id="details">
+				<label>Email Id</label>
+					<input type="text" name="mailid" placeholder="Enter your email"><br>
+				<label>Mobile Number</label>
+					<input type="text" name="mobile" maxlength="10" onkeypress="return isNumberKey(event);" onBlur="isMobileNo(this.value);" placeholder="Enter your mobile number"><br>
+				<label>Date of Birth</label>
+					<input type="date" name="dob" placeholder="Enter your D.O.B"><br>
+				<label>Gender</label>
+					<input type="radio" name="gender" value="male" required>Male&nbsp;&nbsp;
+					<input type="radio" name="gender" value="female" >Female
+					<input type="radio" name="gender" value="others" >Others<br><br>
+				<label>Instituition</label>
+					<input type="text" name="institute" placeholder="Enter your Instituition name"><br>
+						
+			</div>
+			<div id="button">
+				<input type="submit" name="sign" value="SIGN IN">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
